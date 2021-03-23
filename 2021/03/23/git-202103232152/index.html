@@ -18,7 +18,7 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-  <title>Hello World - Hexo</title>
+  <title>使用git把本地项目提交到github、拉取项目、更新github项目 - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Hello World">
+            <span class="h2" id="subtitle" title="使用git把本地项目提交到github、拉取项目、更新github项目">
               
             </span>
 
@@ -173,8 +173,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-03-23 16:26" pubdate>
-        2021年3月23日 下午
+      <time datetime="2021-03-23 21:52" pubdate>
+        2021年3月23日 晚上
       </time>
     </span>
   
@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      75 字
+      312 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      3
        分钟
     </span>
   
@@ -225,22 +225,61 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none">使用git把本地项目提交到github、拉取项目、更新github项目</h1>
             
             <div class="markdown-body">
-              <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+              <hr>
+<h2 id="1-安装git"><a href="#1-安装git" class="headerlink" title="1. 安装git"></a>1. 安装git</h2><p><a target="_blank" rel="noopener" href="https://git-scm.com/downloads">git下载地址</a></p>
+<h2 id="2-本地git连接github账号"><a href="#2-本地git连接github账号" class="headerlink" title="2. 本地git连接github账号"></a>2. 本地git连接github账号</h2><p><a href="./%E6%9C%AC%E5%9C%B0git%E5%B7%A5%E5%85%B7%E7%BB%91%E5%AE%9Agithub%E8%B4%A6%E5%8F%B7.md">本地git工具绑定github账号</a></p>
+<h2 id="3-创建github仓库"><a href="#3-创建github仓库" class="headerlink" title="3. 创建github仓库"></a>3. 创建github仓库</h2><p>创建仓库并<strong>复制</strong>仓库地址</p>
+<p><img src="image-20210323183225770.png" srcset="/img/loading.gif" lazyload alt="仓库名自取"></p>
+<p><img src="image-20210323183327182.png" srcset="/img/loading.gif" lazyload alt="创建完成"></p>
+<h2 id="4-本地项目初始化并连接仓库"><a href="#4-本地项目初始化并连接仓库" class="headerlink" title="4. 本地项目初始化并连接仓库"></a>4. 本地项目初始化并连接仓库</h2><p>打开项目文件右键选择 <code>Git Bash Here</code></p>
+<p><img src="image-20210323183608476.png" srcset="/img/loading.gif" lazyload alt="启动Git Bash"></p>
+<p>初始化git，把这个文件夹变成Git可管理的仓库</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs csharp">git <span class="hljs-keyword">init</span><br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+<p>把本地项目的<strong>origin</strong>分支与github仓库进行关联</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">git remote <span class="hljs-keyword">add </span><span class="hljs-keyword">origin </span>&#123;复制过来的仓库地址&#125;<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
+<p><img src="image-20210323183939139.png" srcset="/img/loading.gif" lazyload alt="没反应就是成功"></p>
+<h2 id="5-把项目上传到github"><a href="#5-把项目上传到github" class="headerlink" title="5. 把项目上传到github"></a>5. 把项目上传到github</h2><p>查看文件状态</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">git status</span><br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+<p><img src="image-20210323184056345.png" srcset="/img/loading.gif" lazyload alt="红色为未添加到缓存区的文件"></p>
+<p>把工作区的文件添加到暂存区</p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm">git <span class="hljs-keyword">add</span> . <span class="hljs-meta">#.代表所有更改过的文件</span><br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p><img src="image-20210323184307519.png" srcset="/img/loading.gif" lazyload alt="没反应就是成功"></p>
+<p>把暂存区的文件提交到本地仓库</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autoit">git commit -m <span class="hljs-string">&#x27;first commit&#x27;</span> <span class="hljs-meta">#<span class="hljs-string">&#x27;&#x27;</span>里写注释</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="image-20210323211604212.png" srcset="/img/loading.gif" lazyload alt="commit提示"></p>
+<p>把本地仓库的<strong>origin</strong>分支文件push到github仓库的<strong>master</strong>分支</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git push -u origin <span class="hljs-keyword">master</span> <span class="hljs-title">#第一次提交由于远程仓库为空所以带-u</span>，以后就不带<br></code></pre></td></tr></table></figure>
+
+<p><img src="image-20210323211758767.png" srcset="/img/loading.gif" lazyload alt="push提示"></p>
+<p>提交完成</p>
+<p><img src="image-20210323211835750.png" srcset="/img/loading.gif" lazyload alt="github仓库"></p>
+<h2 id="6-拉取项目到本地"><a href="#6-拉取项目到本地" class="headerlink" title="6. 拉取项目到本地"></a>6. 拉取项目到本地</h2><p>在要拉取项目的文件夹右键选择 <code>Git Bash Here</code></p>
+<p><img src="image-20210323212417194.png" srcset="/img/loading.gif" lazyload alt="启动Git Bash"></p>
+<p>拉取项目</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">clone</span> <span class="hljs-title">&#123;项目仓库地址&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="image-20210323212555390.png" srcset="/img/loading.gif" lazyload alt="clone提示"></p>
+<p><img src="image-20210323212637144.png" srcset="/img/loading.gif" lazyload alt="拉取过来的项目文件夹"></p>
+<h2 id="7-更新项目"><a href="#7-更新项目" class="headerlink" title="7. 更新项目"></a>7. 更新项目</h2><p>检查文件并添加到暂存区</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">git status</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="image-20210323213252624.png" srcset="/img/loading.gif" lazyload alt="有红色则表示有文件更改"></p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs routeros">git <span class="hljs-builtin-name">add</span> .<br>git status<br></code></pre></td></tr></table></figure>
+
+<p><img src="image-20210323213226344.png" srcset="/img/loading.gif" lazyload alt="都是绿色则表示添加成功"></p>
+<p>更新项目到github</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs gradle">git commit -m <span class="hljs-string">&#x27;update&#x27;</span><br>git <span class="hljs-keyword">push</span> origin master<br></code></pre></td></tr></table></figure>
+
+<p><img src="image-20210323213614480.png" srcset="/img/loading.gif" lazyload alt="push提示"></p>
+<p><img src="image-20210323213647102.png" srcset="/img/loading.gif" lazyload alt="项目仓库更新成功"></p>
 
             </div>
             <hr>
@@ -261,15 +300,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/03/23/%E6%9C%AC%E5%9C%B0git%E5%B7%A5%E5%85%B7%E7%BB%91%E5%AE%9Agithub%E8%B4%A6%E5%8F%B7/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">本地git工具绑定github账号</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2021/03/23/git-202103232150/">
+                        <span class="hidden-mobile">本地git工具绑定github账号</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
