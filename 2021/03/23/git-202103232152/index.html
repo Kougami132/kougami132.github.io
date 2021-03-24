@@ -27,12 +27,6 @@
   <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
   
-    
-    
-      
-      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
-    
-  
 
   
     <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
@@ -237,26 +231,26 @@
 <h2 id="4-本地项目初始化并连接仓库"><a href="#4-本地项目初始化并连接仓库" class="headerlink" title="4. 本地项目初始化并连接仓库"></a>4. 本地项目初始化并连接仓库</h2><p>打开项目文件右键选择 <code>Git Bash Here</code></p>
 <p><img src="image-20210323183608476.png" srcset="/img/loading.gif" lazyload alt="启动Git Bash"></p>
 <p>初始化git，把这个文件夹变成Git可管理的仓库</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs csharp">git <span class="hljs-keyword">init</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
 
 <p>把本地项目的<strong>origin</strong>分支与github仓库进行关联</p>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">git remote <span class="hljs-keyword">add </span><span class="hljs-keyword">origin </span>&#123;复制过来的仓库地址&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin &#123;复制过来的仓库地址&#125;</span><br></pre></td></tr></table></figure>
 
 <p><img src="image-20210323183939139.png" srcset="/img/loading.gif" lazyload alt="没反应就是成功"></p>
 <h2 id="5-把项目上传到github"><a href="#5-把项目上传到github" class="headerlink" title="5. 把项目上传到github"></a>5. 把项目上传到github</h2><p>查看文件状态</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">git status</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
 
 <p><img src="image-20210323184056345.png" srcset="/img/loading.gif" lazyload alt="红色为未添加到缓存区的文件"></p>
 <p>把工作区的文件添加到暂存区</p>
-<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm">git <span class="hljs-keyword">add</span> . <span class="hljs-meta">#.代表所有更改过的文件</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add . #.代表所有更改过的文件</span><br></pre></td></tr></table></figure>
 
 <p><img src="image-20210323184307519.png" srcset="/img/loading.gif" lazyload alt="没反应就是成功"></p>
 <p>把暂存区的文件提交到本地仓库</p>
-<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autoit">git commit -m <span class="hljs-string">&#x27;first commit&#x27;</span> <span class="hljs-meta">#<span class="hljs-string">&#x27;&#x27;</span>里写注释</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &#39;first commit&#39; #&#39;&#39;里写注释</span><br></pre></td></tr></table></figure>
 
 <p><img src="image-20210323211604212.png" srcset="/img/loading.gif" lazyload alt="commit提示"></p>
 <p>把本地仓库的<strong>origin</strong>分支文件push到github仓库的<strong>master</strong>分支</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git push -u origin <span class="hljs-keyword">master</span> <span class="hljs-title">#第一次提交由于远程仓库为空所以带-u</span>，以后就不带<br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master #第一次提交由于远程仓库为空所以带-u，以后就不带</span><br></pre></td></tr></table></figure>
 
 <p><img src="image-20210323211758767.png" srcset="/img/loading.gif" lazyload alt="push提示"></p>
 <p>提交完成</p>
@@ -264,19 +258,19 @@
 <h2 id="6-拉取项目到本地"><a href="#6-拉取项目到本地" class="headerlink" title="6. 拉取项目到本地"></a>6. 拉取项目到本地</h2><p>在要拉取项目的文件夹右键选择 <code>Git Bash Here</code></p>
 <p><img src="image-20210323212417194.png" srcset="/img/loading.gif" lazyload alt="启动Git Bash"></p>
 <p>拉取项目</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">clone</span> <span class="hljs-title">&#123;项目仓库地址&#125;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone &#123;项目仓库地址&#125;</span><br></pre></td></tr></table></figure>
 
 <p><img src="image-20210323212555390.png" srcset="/img/loading.gif" lazyload alt="clone提示"></p>
 <p><img src="image-20210323212637144.png" srcset="/img/loading.gif" lazyload alt="拉取过来的项目文件夹"></p>
 <h2 id="7-更新项目"><a href="#7-更新项目" class="headerlink" title="7. 更新项目"></a>7. 更新项目</h2><p>检查文件并添加到暂存区</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">git status</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
 
 <p><img src="image-20210323213252624.png" srcset="/img/loading.gif" lazyload alt="有红色则表示有文件更改"></p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs routeros">git <span class="hljs-builtin-name">add</span> .<br>git status<br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git status</span><br></pre></td></tr></table></figure>
 
 <p><img src="image-20210323213226344.png" srcset="/img/loading.gif" lazyload alt="都是绿色则表示添加成功"></p>
 <p>更新项目到github</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs gradle">git commit -m <span class="hljs-string">&#x27;update&#x27;</span><br>git <span class="hljs-keyword">push</span> origin master<br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &#39;update&#39;</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
 
 <p><img src="image-20210323213614480.png" srcset="/img/loading.gif" lazyload alt="push提示"></p>
 <p><img src="image-20210323213647102.png" srcset="/img/loading.gif" lazyload alt="项目仓库更新成功"></p>
@@ -410,8 +404,6 @@
   
 
 
-
-  
 
 
 

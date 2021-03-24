@@ -27,12 +27,6 @@
   <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
   
-    
-    
-      
-      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
-    
-  
 
   
     <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
@@ -232,11 +226,11 @@
 <h2 id="2-设置github账号"><a href="#2-设置github账号" class="headerlink" title="2. 设置github账号"></a>2. 设置github账号</h2><p>安装完成后桌面或任何位置右键选择 <code>Git Bash Here</code></p>
 <p><img src="image-20210323151756733.png" srcset="/img/loading.gif" lazyload alt="右键显示"></p>
 <p>输入以下命令</p>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs verilog">git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">global</span> user<span class="hljs-variable">.name</span> <span class="hljs-string">&quot;你的GitHub用户名&quot;</span><br>git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">global</span> user<span class="hljs-variable">.email</span> <span class="hljs-string">&quot;你的GitHub注册邮箱&quot;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你的GitHub用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure>
 
 <p><img src="image-20210323153112909.png" srcset="/img/loading.gif" lazyload alt="没反应就是成功"></p>
 <h2 id="3-生成ssh文件"><a href="#3-生成ssh文件" class="headerlink" title="3. 生成ssh文件"></a>3. 生成ssh文件</h2><p>输入以下命令(输入后三个选项都直接回车即可)</p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs excel">ssh-keygen -<span class="hljs-built_in">t</span> rsa -C <span class="hljs-string">&quot;你的GitHub注册邮箱&quot;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure>
 
 <p>图为公钥存储位置</p>
 <p><img src="image-20210323154538629.png" srcset="/img/loading.gif" lazyload alt="ssh文件存储路径"></p>
@@ -245,7 +239,7 @@
 <p><img src="image-20210323155104481.png" srcset="/img/loading.gif" lazyload alt="添加公钥"></p>
 <p>Title随意，Key填复制过来的公钥</p>
 <h2 id="5-连接完成"><a href="#5-连接完成" class="headerlink" title="5. 连接完成"></a>5. 连接完成</h2><p>添加后在<code>git bash</code>里输入</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs angelscript">ssh <span class="hljs-symbol">git@</span>github.com<br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure>
 
 <p>若成功则显示</p>
 <p><img src="image-20210323155730994.png" srcset="/img/loading.gif" lazyload></p>
@@ -379,8 +373,6 @@
   
 
 
-
-  
 
 
 
